@@ -64,3 +64,23 @@ function isPalindrome(string){
 }
 
 console.log(isPalindrome('osso'));
+
+/*Esercizio 6
+Scrivi una funzione che prenda un array di numeri come parametro e restituisca la somma di tutti gli elementi.*/
+
+
+function sumArrayNumbers(array){
+    let sum = 0;
+    for (let i = 0; i < array.length; i++){
+
+        sum += array[i];
+        
+    }
+    return sum;
+}
+
+
+console.log(sumArrayNumbers([10, 25, 2, 5]));
+
+/*Esercizio 7
+Scrivi una funzione che prenda un array di numeri come parametro e restituisca un oggetto con le proprietà "massimo" e "minimo" che rappresentano rispettivamente il valore massimo e il valore minimo dell'array.*/
