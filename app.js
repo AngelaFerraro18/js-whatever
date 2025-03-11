@@ -129,3 +129,44 @@ function minMaxValue(array){
 }
 
 console.log(minMaxValue(pippo));
+
+
+/*Esercizio 8
+Scrivi una funzione che prenda una stringa come parametro e restituisca il numero di vocali presenti nella stringa.*/
+
+
+const word = 'melaverde';
+
+// let count = 0;
+
+// const vowels = 'aeiou';
+
+// for (let i = 0; i < word.length; i++){
+
+//     word.toLowerCase();
+
+//     if (vowels.indexOf(word[i]) >= 0){
+//         count++
+//     }
+// } console.log(count);
+
+
+function countVowels(string){
+    let count = 0;
+    const vowels = 'aeiou';
+
+    for (let i = 0; i < string.length; i++){
+
+        string.toLowerCase();
+
+        if (vowels.indexOf(string[i]) >= 0){
+            count++
+        }
+    }
+    return count;
+}
+
+console.log(countVowels(word));
+
+/*Esercizio 9
+Scrivi una funzione che prenda un array di numeri come parametro e restituisca la media di tutti gli elementi.*/
