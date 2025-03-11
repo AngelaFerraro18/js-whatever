@@ -1,0 +1,66 @@
+/*Esercizio 1
+Scrivi una funzione che prenda due parametri, base e altezza, e restituisca l'area del rettangolo corrispondente.*/
+
+//l'area del rettangolo si calcola: base * altezza
+
+function rectangleArea(num1, num2) {
+
+    const result = num1 * num2;
+    return result;
+}
+
+console.log(rectangleArea(5, 10));
+
+
+/*Esercizio 2
+Scrivi una funzione che prenda un parametro numero e restituisca true se il numero è pari, altrimenti restituisca false.*/
+
+function isNumberEven(num1) {
+
+    if (num1 % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(isNumberEven(2));
+console.log(isNumberEven(27));
+
+/*Esercizio 3
+Scrivi una funzione che prenda due parametri di tipo stringa e restituisca la loro concatenazione.*/
+
+function twoStrings(string1, string2) {
+
+    const result = string1 + string2;
+    return result;
+}
+
+console.log(twoStrings('ciao', ' Angela'));
+
+/*Esercizio 4
+Scrivi una funzione che generi un numero casuale compreso tra un valore minimo e un valore massimo.*/
+
+function randomNumber(min, max) {
+
+    const number = Math.floor(Math.random() * (max - min + 1)) + min;
+    return number;
+}
+
+console.log(randomNumber(1, 10));
+
+/*Esercizio 5
+Scrivi una funzione che prenda una parola come parametro e restituisca true se la parola è palindroma, altrimenti restituisca false.*/
+
+function isPalindrome(string){
+
+    for(let i = 0; i < string.length/2; i++){
+
+        if (string[i] !== string[string.length-1 - i]){
+            return false;
+        } 
+    } 
+    return true;
+}
+
+console.log(isPalindrome('osso'));
