@@ -52,14 +52,14 @@ console.log(randomNumber(1, 10));
 /*Esercizio 5
 Scrivi una funzione che prenda una parola come parametro e restituisca true se la parola è palindroma, altrimenti restituisca false.*/
 
-function isPalindrome(string){
+function isPalindrome(string) {
 
-    for(let i = 0; i < string.length/2; i++){
+    for (let i = 0; i < string.length / 2; i++) {
 
-        if (string[i] !== string[string.length-1 - i]){
+        if (string[i] !== string[string.length - 1 - i]) {
             return false;
-        } 
-    } 
+        }
+    }
     return true;
 }
 
@@ -69,12 +69,12 @@ console.log(isPalindrome('osso'));
 Scrivi una funzione che prenda un array di numeri come parametro e restituisca la somma di tutti gli elementi.*/
 
 
-function sumArrayNumbers(array){
+function sumArrayNumbers(array) {
     let sum = 0;
-    for (let i = 0; i < array.length; i++){
+    for (let i = 0; i < array.length; i++) {
 
         sum += array[i];
-        
+
     }
     return sum;
 }
@@ -84,3 +84,48 @@ console.log(sumArrayNumbers([10, 25, 2, 5]));
 
 /*Esercizio 7
 Scrivi una funzione che prenda un array di numeri come parametro e restituisca un oggetto con le proprietà "massimo" e "minimo" che rappresentano rispettivamente il valore massimo e il valore minimo dell'array.*/
+
+
+let pippo = [58, 26, 120, 20];
+
+// let obj = {
+//     minimo: '',
+//     massimo: ''
+// }
+// let value = pippo[0];
+
+// for (let i = 1; i < pippo.length; i++) {
+
+//     if (value < pippo[i]) {
+//        obj.minimo = value;
+//         console.log(obj);
+//     }
+//     if (pippo[i] > value){
+//         obj.massimo = pippo[i];
+//         console.log(obj);
+//     }
+   
+// } console.log(obj);
+
+
+function minMaxValue(array){
+
+    let obj = {
+        minimo: '',
+        massimo: ''
+    };
+    let value = array[0];
+
+    for (let i = 1; i < array.length; i++) {
+
+        if (value < array[i]) {
+           obj.minimo = array[i];
+        }
+        if (value > array[i]){
+            obj.massimo = array[i];
+        }
+       
+    } return obj;
+}
+
+console.log(minMaxValue(pippo));
