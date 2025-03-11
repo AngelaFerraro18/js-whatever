@@ -170,3 +170,19 @@ console.log(countVowels(word));
 
 /*Esercizio 9
 Scrivi una funzione che prenda un array di numeri come parametro e restituisca la media di tutti gli elementi.*/
+
+let numArray = [1, 5, 8, 15, 20];
+
+// media aritmetica = somma di tutti i numeri / la quantità di numeri sommati
+function arrayNumbers(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+
+        sum += array[i];
+        
+
+    }
+    return sum / array.length;
+}
+
+console.log(arrayNumbers(numArray));
