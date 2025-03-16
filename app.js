@@ -186,3 +186,143 @@ function arrayNumbers(array) {
 }
 
 console.log(arrayNumbers(numArray));
+
+// Esercizi vari
+
+//Snack 1: - Conta i numeri dispari in un array
+const numeri1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let count = 0;
+
+for (let i = 0; i < numeri1.length; i++){
+    
+    const numero = numeri1[i];
+    if (numero % 2 !== 0){
+        count++
+    }
+}
+console.log(`I numeri dispari sono ${count}`);
+
+const oddNumbers = numeri1.filter(num =>{
+    return num % 2 !== 0;
+})
+
+console.log (`I numeri dispari sono ${oddNumbers.length}`);
+
+//Snack 2 - Trova il numero più grande in un array
+const numeri2 = [23, 45, 67, 12, 89, 34];
+
+let maxNumber = numeri2[0];
+
+for (let i = 1; i < numeri2.length; i++){
+    if(maxNumber < numeri2[i]){
+        maxNumber = numeri2[i];
+    }
+}
+console.log(`Il numero maggiore è ${maxNumber}`);
+
+//Snack 3 - Calcola la media di un array
+const numeri3 = [10, 20, 30, 40, 50];
+let sum = 0;
+let media = 0;
+for (let i = 0; i < numeri3.length; i++){
+    sum += numeri3[i];
+    media = sum / numeri3.length;
+}
+console.log(`La media è ${media}`);
+
+//Snack 4 - Conta quante volte appare un numero in un array
+const numeri4 = [1, 2, 3, 4, 2, 3, 2, 5, 6, 2];
+
+let countObj = {};
+
+for (let i = 0; i < numeri4.length; i++){
+    
+    let numArr = numeri4[i];
+
+    if (countObj[numArr]){
+        countObj[numArr]++;
+    } else {
+        countObj[numArr] = 1;
+    }
+}console.log(countObj);
+
+
+
+
+//Snack 5 - Trova il numero più piccolo in un array
+const numeri5 = [23, 45, 67, 12, 89, 34];
+
+let minNum = numeri5[0];
+
+for (let i = 1; i < numeri5.length; i++){
+    if (minNum > numeri5[i]){
+        minNum = numeri5[i];
+    }
+}
+console.log(`Il numero più piccolo è ${minNum}`);
+
+//Snack 6 - Conta i Numeri Pari
+const numeri6 = [1, 2, 3, 4, 5, 6, 7, 8];
+
+let count3 = 0;
+
+for (let i = 0; i < numeri6.length; i++){
+    if (numeri6[i] % 2 === 0){
+        count3++
+    }
+}
+console.log(`Il numeri pari sono ${count3}`);
+
+//Snack 7 - Somma di Tutti gli Elementi
+const numeri7 = [5, 10, 15, 20];
+
+let sum2 = 0;
+
+for (let i = 0; i < numeri7.length; i++){
+    sum2 += numeri7[i];
+}
+console.log(`La somma è ${sum2}`);
+
+//Snack 8 - Calcola il Prodotto
+const numeri8 = [2, 3, 4];
+
+let prodotto = numeri8[0];
+
+for (let i = 1; i < numeri8.length; i++){
+
+    prodotto = prodotto * numeri8[i];
+}
+console.log(`Il prodotto è ${prodotto}`)
+
+//Snack 9 - Verifica se un Numero è Primo
+ function isPrimo(esNove) {
+    for (let i = 2; i < esNove; i++){
+        if (esNove % i === 0){
+             return false;
+        }
+    }return true;
+ }
+
+ console.log(isPrimo(7)); // true
+ console.log(isPrimo(10)); // false
+
+//i numeri primi partono da 2 e sono divisibili per sè stessi e per 1
+
+
+//Snack 10 - Rimuovi Numeri Pari da un Array
+const numeri10 = [1, 2, 3, 4, 5, 6, 7];
+const newArray2 = [];
+
+for ( let i = 0; i < numeri10.length; i++){
+    if (numeri10[i] % 2 !== 0){
+        newArray2.push(numeri10[i]);
+    }
+}
+console.log(newArray2);
+
+
+const oddArray = numeri10.filter(num => {
+    return num % 2 !== 0;
+})
+console.log(oddArray);
