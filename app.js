@@ -326,3 +326,91 @@ const oddArray = numeri10.filter(num => {
     return num % 2 !== 0;
 })
 console.log(oddArray);
+
+//Scrivi un programma che dati quattro numeri, restituisca in output il maggiore e il minore. 
+
+// Esempio:
+
+// Input: a = 3, b = -1, c = 4, d = -2
+// Output: maggiore = 4, minore = 2
+
+
+const numbers4 = [2, 4, 76, 43];
+
+let maxNum = numbers4[0];
+let minNumb = numbers4[0];
+
+for (let i = 1; i < numbers4.length; i++){
+    if (maxNum > numbers4[i]){
+        maxNum = numbers4[i];
+    } else if(minNumb < numbers4[i]) {
+        minNumb = numbers4[i];
+    }
+} console.log(`maggiore = ${maxNum} minimo = ${minNumb}`);
+
+// Quanti anni ha?
+// Scrivi un programma che dato l’anno corrente e un anno di nascita determini:
+
+// l’età della persona
+// quanti anni sono necessari per raggiungere i 100
+// Esempio:
+
+// Input: anno corrente = 2021, anno di nascita = 1996
+// Output: età = 25, anni mancanti = 75
+
+let year = 2025;
+let born = 1994;
+
+let persona = {
+    età: '',
+    anniMancanti: ''
+};
+
+persona.età = year - born;
+persona.anniMancanti = 100 - persona.età;
+console.log(persona);
+
+//Esercizio 3: Ciclo for
+// Progetta un algoritmo in Javascript che stampi tutte le coppie di numeri naturali la cui somma è un numero intero a scelta.
+
+// Esempio
+
+// Input: numero 7
+// Output: 
+// - 0-7
+// - 1-6
+// - 2-5
+// - 3-4
+// - 4-3
+// - 5-2
+// - 6-1
+// - 7-0
+
+// x + y = S
+let x;
+let y;
+let somma = 10;
+
+
+for (let i = 0; i <= somma; i++){
+    // console.log(i);
+    x = i;
+    y = somma - i;
+    // console.log(x);
+    // console.log(y);
+    console.log(`${x} + ${y} = ${somma}`);
+}
+
+// Esercizio 4: metodo e proprietà
+// Il conta cifre
+// Scrivi un programma che dato un numero conti da quante cifre è formato.
+
+// Esempio
+
+// Input: numero: 245
+// Output: numero cifre: 3
+
+let numeroBoh = 5426;
+let numeroStringa = numeroBoh.toString();
+console.log(numeroStringa.length);
+
