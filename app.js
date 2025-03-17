@@ -414,3 +414,145 @@ let numeroBoh = 5426;
 let numeroStringa = numeroBoh.toString();
 console.log(numeroStringa.length);
 
+
+//Numeri pari
+// Scrivi un programma che stampa tutti i numeri pari da 1 a 20.
+
+
+for (let i = 1; i <= 20; i++){
+    if(i % 2 === 0){
+        console.log(i);
+    }
+}
+
+// Multipli di 3
+// Stampa i numeri da 1 a 50, ma se un numero è multiplo di 3, stampa "Multiplo di 3" invece del numero.
+
+for (let i = 1; i <= 50; i++){
+    if( i % 3 === 0){
+        console.log('Multiplo di 3');
+    } else {
+        console.log(i);
+    }
+}
+
+// Somma dei numeri dispari
+// Calcola e stampa la somma di tutti i numeri dispari da 1 a 100.
+
+let summa = 0;
+
+for (let i = 1; i <= 100; i++){
+    if ( i % 2 !== 0){
+        // console.log(i);
+        summa = summa + i; //summa += i;
+    }
+} console.log(summa);
+
+// Numeri primi tra 1 e 50
+// Stampa tutti i numeri primi tra 1 e 50. (Un numero primo è divisibile solo per 1 e per sé stesso.)
+
+for (let num = 2; num <= 50; num++){
+   let primo = true;
+
+   for (let i = 2; i < num; i++){
+    if (num % i === 0){
+        primo = false;
+    }
+   }
+
+   if (primo){
+    console.log(num);
+   }
+}
+
+// //Conto alla rovescia con messaggi
+// Stampa un conto alla rovescia da 10 a 0. Quando il numero è 5, stampa "Attenzione!", e quando arriva a 0, stampa "Boom!".
+
+for (let i = 10; i >=0; i--){
+    if ( i === 5){
+        console.log('Attenzione');
+    } else if (i === 0) {
+        console.log('Boom');
+    } else{
+        console.log(i);
+    }
+}
+
+// Sostituzione dei numeri
+// Stampa i numeri da 1 a 30, ma:
+
+// Se il numero è divisibile per 3, stampa "Fizz".
+// Se è divisibile per 5, stampa "Buzz".
+// Se è divisibile per entrambi, stampa "FizzBuzz".
+
+let Fizz = 'Fizz';
+let Buzz = 'Buzz';
+
+for ( let i = 1; i <= 30; i++){
+    if (i % 3 === 0 && i % 5 === 0){
+        console.log(Fizz + Buzz);
+    } else if (i % 3 === 0){
+        console.log(Fizz);
+    } else if (i % 5 === 0){
+        console.log(Buzz);
+    } else {
+        console.log(i);
+    }
+}
+
+// Tabellina del 7
+// Stampa la tabellina del 7 (da 7 × 1 fino a 7 × 10).
+
+let tabellina = 7;
+
+for (let i = 1; i <= 10; i++){
+    // console.log(tabellina * i);
+    console.log(`${tabellina} x ${i} = ${tabellina * i}`);
+}
+
+// Conta numeri positivi e negativi
+// Dato un array di numeri, conta quanti sono positivi e quanti sono negativi, poi stampa il risultato. Esempio:
+let numeri = [5, -3, 8, -2, 0, -7, 6, -1];
+
+let countPos = 0;
+let countNeg = 0;
+
+for (let i = 0; i <= numeri.length; i++){
+    if (numeri[i] < 0){
+        countNeg++; //-3, -2, -7, -1
+    } else if (numeri[i] >= 0){
+        countPos++; //5, 8, 0, 6
+    }
+}
+console.log(countPos);
+console.log(countNeg);
+
+// Numeri palindromi (da 10 a 200)
+// Trova e stampa tutti i numeri palindromi tra 10 e 200. Un numero è palindromo se letto al contrario è uguale all'originale (es. 121, 131, 141).
+
+for (let num = 10; num <= 200; num++){
+
+    let stringNum = num.toString();
+    let reversed = '';
+
+    for (let i = stringNum.length - 1; i >= 0; i--){
+        reversed += stringNum[i];
+    }
+
+    if (stringNum === reversed){
+        console.log(num);
+    }
+
+}
+
+// Somma dei numeri divisibili per 4
+// Calcola e stampa la somma di tutti i numeri da 1 a 100 che sono divisibili per 4.
+let sommaaa = 0;
+
+for (let i = 1; i <= 100; i++){
+    if (i % 4 === 0){
+        // console.log(i);
+        // sommaaa += i;
+        console.log(`${i} + ${sommaaa} = ${sommaaa += i}`);
+    }
+}console.log(sommaaa);
