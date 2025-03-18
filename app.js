@@ -556,3 +556,26 @@ for (let i = 1; i <= 100; i++){
         console.log(`${i} + ${sommaaa} = ${sommaaa += i}`);
     }
 }console.log(sommaaa);
+
+// destructoring obj
+const student = {
+    name: 'Paolo',
+    age: 30,
+    email: 'me@meme.com'
+};
+let {age, email} = student;
+const {name: newName} = student;
+console.log(newName);
+console.log(student);
+console.log(age, email);
+console.log(age);
+console.log(email);
+const emails = 'pappa@gatto.it';
+const ages = 21
+
+let students = {
+    name: 'Paolo',
+    ages,
+    emails
+};
+console.log(students);
